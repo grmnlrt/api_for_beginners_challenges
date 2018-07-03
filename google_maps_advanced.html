@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Maps Advanced</title>
+  <style>
+    #map {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h2>To do:</h2>
+  <ul>
+    <li>Center la carte sur Paris - <a href="https://www.gps-longitude-latitude.net/coordonnees-gps-de-paris" target="_blank"><i>Indice</i></a></li>
+    <li>Augmenter le niveau de zoom</li>
+    <li>Placer le marqueur sur Paris - <a href="https://www.gps-longitude-latitude.net/coordonnees-gps-de-paris" target="_blank"><i>Indice</i></a></li>
+  </ul>
+
+  <div id="map"></div>
+
+
+  <!-- Changer le code ci-dessous -->
+
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+      });
+      new google.maps.Marker({position: {lat: -34.397, lng: 150.644}, map: map});
+    }
+  </script>
+
+ <!-- Changer le code ci-dessus -->
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+</body>
+</html>
